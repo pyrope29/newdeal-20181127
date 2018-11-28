@@ -3,3 +3,5 @@ ok
 ok
 
 error 잡았음!!!
+
+reset 대신 revert를 써보자
