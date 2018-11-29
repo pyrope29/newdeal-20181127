@@ -13,8 +13,10 @@ public class App3 {
     Date[] createdDate = new Date[LENGTH];
     int[] viewCount = new int[LENGTH];
     
+    
     int i = 0;
     while (i < LENGTH) {
+     
       System.out.print("번호? ");
       no[i] = Integer.parseInt(keyboard.nextLine());
       

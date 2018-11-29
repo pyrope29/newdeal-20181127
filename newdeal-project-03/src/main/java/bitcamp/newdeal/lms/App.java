@@ -35,7 +35,7 @@ public class App {
       System.out.println("총강의시간? ");
       totalHours[i] = Integer.parseInt(keyIn.nextLine());
 
-      System.out.println("일강의시간? ");
+      System.out.println(" 일강의시간? ");
       dayHours[i]  = Integer.parseInt(keyIn.nextLine());
 
       len++;    //카운터 증가
@@ -48,13 +48,14 @@ public class App {
       break;
     }
     keyIn.close();
+    
 
     for(int i=0; i<len; i++) {
       System.out.printf("%d, %d, %s~%d, %d\n",
-          no[i],title[i], contents[i], startDate[i], endDate[i],  totalHours[i],
+          no[i], title[i], contents[i], startDate[i], endDate[i],  totalHours[i],
           dayHours[i]          );
       
- /*     System.out.println("번호 : " + no[i]);
+ /*   위 반복문+printf로 리팩토링  System.out.println("번호 : " + no[i]);
       System.out.printf("수업명 : %s\n", title[i]);
       System.out.printf("내용 : %s\n", contents[i]);
       System.out.printf("시작일 : %s\n", startDate[i]);

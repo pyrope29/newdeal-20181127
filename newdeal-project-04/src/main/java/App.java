@@ -17,28 +17,34 @@ public class App {
     int[] totalHours = new int[LENGTH];
     int[] dayHours = new int[LENGTH];
     
+    Lesson[] lessons = new Lesson[LENGTH];   
+    
     int i = 0;
+    Lesson lesson = new Lesson();   //lesson.java의 메모리가 만들어지는순간
     while (i < LENGTH) {
+      lessons[i] = new Lesson();
+      
+      
       System.out.print("번호? ");
-      no[i] = Integer.parseInt(keyboard.nextLine());
+      lessons[i].no = Integer.parseInt(keyboard.nextLine());
       
       System.out.print("수업명? ");
-      title[i] = keyboard.nextLine();
+      lessons[i].title = keyboard.nextLine();
       
       System.out.print("설명? ");
-      contents[i] = keyboard.nextLine();
+      lessons[i].contents = keyboard.nextLine();
       
       System.out.print("시작일? ");
-      startDate[i] = Date.valueOf(keyboard.nextLine());
+      lessons[i].startDate = Date.valueOf(keyboard.nextLine());
       
       System.out.print("종료일? ");
-      endDate[i] = Date.valueOf(keyboard.nextLine());
+      lessons[i].endDate = Date.valueOf(keyboard.nextLine());
       
       System.out.print("총수업시간? ");
-      totalHours[i] = Integer.parseInt(keyboard.nextLine());
+      lessons[i].totalHours = Integer.parseInt(keyboard.nextLine());
       
       System.out.print("일수업시간? ");
-      dayHours[i] = Integer.parseInt(keyboard.nextLine());
+      lessons[i].dayHours = Integer.parseInt(keyboard.nextLine());
       
       i++; // 배열의 인덱스를 증가시킨다.
       
@@ -61,7 +67,8 @@ public class App {
     // 배열에 입력한 개수만큼 출력한다.
     for (int j = 0; j < i; j++) {
       System.out.printf("%3d, %-15s, %10s ~ %10s, %4d\n", 
-          no[j], title[j], startDate[j], endDate[j], totalHours[j]);
+          lessons[j].no, lessons[j].title, lessons[j].startDate, 
+          lessons[j].endDate, lessons[j].totalHours);
     }
   }
 }
