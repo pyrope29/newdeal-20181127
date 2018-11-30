@@ -2,7 +2,7 @@ package com.eomcs.lms.handler;
 import java.sql.Date;
 import java.util.Scanner;
 import com.eomcs.lms.domain.Lesson;
-import com.eomcs.lms.util.ArrayList;
+import com.eomcs.util.ArrayList;
 
 public class LessonHandler {
 
@@ -17,7 +17,7 @@ public class LessonHandler {
   public void listLesson() {
     Lesson[] lessons = new Lesson[list.size()];
     list.toArray(lessons);
-    for (Lesson lesson: lessons) {
+    for (Lesson lesson : lessons) {
       System.out.printf("%3d, %-15s, %10s ~ %10s, %4d\n", 
           lesson.getNo(), lesson.getTitle(), 
           lesson.getStartDate(), lesson.getEndDate(), lesson.getTotalHours());

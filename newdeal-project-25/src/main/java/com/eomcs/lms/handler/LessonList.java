@@ -32,12 +32,13 @@ public class LessonList {
     list[size] = lesson;
     size++;    
     //=list[size++] = lesson;
-    
+     
+    //전위 연산자, 후위연산자
 /*    int i=10;
-    i=++i;          i=11;
+    i=++i;          
     System.out.print(i);
-    i=i++;          i=10;
-    System.out.print(i);
-   */
+    i=i++;          
+    System.out.print(i);*/
+   
   }
 }

@@ -30,12 +30,7 @@ public class App {
     MemberHandler memberHandler = new MemberHandler(keyboard, new LinkedList<>());
     
     ArrayList<Board> boards = new ArrayList<>();
-/*    BoardListCommand boardListCommand;
-    BoardDatailCommand boardDetailCommand;
-    BoardAddCommand boardAddCommand ;
-    BoardUpdateCommand boardUpdateCommand ;
-    BoardDeleteCommand boardDeleteCommand;
-*/    
+
     HashMap<String, Command> commandMap = new HashMap<>();
     
     commandMap.put("/board/list", new BoardListCommand(keyboard, boards));

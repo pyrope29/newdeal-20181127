@@ -2,25 +2,26 @@ package com.eomcs.lms.handler;
 import java.sql.Date;
 import java.util.Scanner;
 import com.eomcs.lms.domain.Member;
-import com.eomcs.lms.util.ArrayList;
+import com.eomcs.lms.util.MyArrayList;
 
 public class MemberHandler {
   
   Scanner keyboard;
-  ArrayList<Member> list;
+  MyArrayList<Member> list;
   
   public MemberHandler(Scanner keyboard) {
     this.keyboard = keyboard;
-    this.list = new ArrayList(20);
+    this.list = new MyArrayList<>(20);
   }
   
   public void listMember() {
     Member[] members = new Member[list.size()];
-    
+    list.toArray(members);
     for (Member member : members) {
       System.out.printf("%3d, %-4s, %-20s, %-15s, %s\n", 
           member.getNo(), member.getName(), 
-          member.getEmail(), member.getTel(), member.getRegisteredDate());
+          member.getEmail(), member.getTel(), 
+          member.getRegisteredDate());
     }
   }
 
@@ -52,7 +53,4 @@ public class MemberHandler {
     System.out.println("저장하였습니다.");
   }
 
-  public int size() {
-    return this.size();
-  }
 }

@@ -23,7 +23,7 @@ public class ArrayList<T> implements List<T>{   //list 인터페이스의 구현
     if (a.length < size) {
       return (T[]) Arrays.copyOf(elementData, size, a.getClass());
     }
-    System.arraycopy(elementData, 0, a, 0, size);
+    System.arraycopy(elementData, 0, a, 0, size);   //elementData의 값을 0번부터 a에다 복사하기 
     if (a.length > size)
       a[size] = null;
     return a;
