@@ -1,43 +1,49 @@
-# eomcs-java-project-2.4
+# eomcs-java-project-2.5
 
-인스턴스 연산자와 메서드
+UI 코드와 데이터 처리 코드를 분리하기
 
-- 메서드를 활용하여 인스턴스 값을 다루는 연산자를 정의하는 방법
-- 캡슐화와 셋터/겟터의 의미
+- 데이터 처리 코드를 캡슐화하는 방법
+- 캡슐화를 통해 얻을 수 이점 이해하기 
 
 ## 프로젝트 - 수업관리 시스템  
 
-### 과제 1: Lesson 인스턴스의 값을 다룰 연산자를 정의하라.
+### 과제 1: LessonHandler에서 데이터 처리 코드를 분리하라.
 
-- Lesson.java
-    - 인스턴스 변수(필드)를 비공개(private)로 전환한다.
-    - 값을 설정하고 리턴해주는 세터/게터를 정의한다. 
+- LessonList.java
+    - `LessonHandler`에서 데이터 처리 코드를 이 클래스로 옮긴다.
+    - 수업 데이터 배열을 리턴하는 toArray() 메서드를 정의한다.
+    - 수업 데이터를 저장하는 add() 메서드를 정의한다.
+    - 기본 생성자와 배열의 초기 크기를 설정하는 생성자를 정의한다.  
 - LessonHandler.java
-    - Lesson 인스턴스에 값을 넣고 꺼낼 때 세터/겟터를 사용한다.
+    - `LessonList` 클래스를 사용하여 데이터를 처리한다.
 
 #### 실행 결과
 
 `App` 클래스의 실행 결과는 이전 버전과 같다.
 
-### 과제 2: Member 인스턴스의 값을 다룰 연산자를 정의하라.
+### 과제 2: MemberHandler에서 데이터 처리 코드를 분리하라.
 
-- Member.java
-    - 인스턴스 변수(필드)를 비공개(private)로 전환한다.
-    - 값을 설정하고 리턴해주는 세터/게터를 정의한다. 
+- MemberList.java
+    - `MemberHandler`에서 데이터 처리 코드를 이 클래스로 옮긴다.
+    - 회원 데이터 배열을 리턴하는 toArray() 메서드를 정의한다.
+    - 회원 데이터를 저장하는 add() 메서드를 정의한다.
+    - 기본 생성자와 배열의 초기 크기를 설정하는 생성자를 정의한다.  
 - MemberHandler.java
-    - Member 인스턴스에 값을 넣고 꺼낼 때 세터/겟터를 사용한다.
+    - `MemberList` 클래스를 사용하여 데이터를 처리한다.
 
 #### 실행 결과
 
 `App` 클래스의 실행 결과는 이전 버전과 같다.
 
-### 과제 3: Board 인스턴스의 값을 다룰 연산자를 정의하라.
+### 과제 3: BoardHandler에서 데이터 처리 코드를 분리하라.
 
-- Board.java
-    - 인스턴스 변수(필드)를 비공개(private)로 전환한다.
-    - 값을 설정하고 리턴해주는 세터/게터를 정의한다. 
+- BoardList.java
+    - `BoardHandler`에서 데이터 처리 코드를 이 클래스로 옮긴다.
+    - 게시물 데이터 배열을 리턴하는 toArray() 메서드를 정의한다.
+    - 게시물 데이터를 저장하는 add() 메서드를 정의한다.
+    - 기본 생성자와 배열의 초기 크기를 설정하는 생성자를 정의한다.  
 - BoardHandler.java
-    - Board 인스턴스에 값을 넣고 꺼낼 때 세터/겟터를 사용한다.
+    - `BoardList` 클래스를 사용하여 데이터를 처리한다.
 
 #### 실행 결과
 
@@ -45,9 +51,9 @@
 
 ## 실습 소스
 
-- src/main/java/com/eomcs/lms/domain/Lesson.java 변경
-- src/main/java/com/eomcs/lms/domain/Member.java 변경
-- src/main/java/com/eomcs/lms/domain/Board.java 변경
+- src/main/java/com/eomcs/lms/handler/LessonList.java 추가
+- src/main/java/com/eomcs/lms/handler/MemberList.java 추가
+- src/main/java/com/eomcs/lms/handler/BoardList.java 추가
 - src/main/java/com/eomcs/lms/handler/LessonHandler.java 변경
 - src/main/java/com/eomcs/lms/handler/MemberHandler.java 변경
 - src/main/java/com/eomcs/lms/handler/BoardHandler.java 변경
