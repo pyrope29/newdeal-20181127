@@ -2,11 +2,13 @@ package com.eomcs.lms.handler;
 
 import java.util.List;
 import java.util.Scanner;
+import org.apache.ibatis.session.SqlSessionFactory;
 import com.eomcs.lms.dao.BoardDao;
+import com.eomcs.lms.dao.impl.MariaDBBoardDao;
 import com.eomcs.lms.domain.Board;
 
 public class BoardListCommand implements Command {
-
+  SqlSessionFactory sqlSessionFactory;
   Scanner keyboard;
   BoardDao boardDao;
 
@@ -18,7 +20,6 @@ public class BoardListCommand implements Command {
   public void execute() {
 
     try {
-      BoardDao boardDao = new BoardDao();
       List<Board> list = boardDao.findAll();
 
       // dbms에서 한 개의 레코드를 가져온다.

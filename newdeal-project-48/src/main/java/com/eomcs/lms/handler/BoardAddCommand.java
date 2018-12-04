@@ -22,9 +22,11 @@ public class BoardAddCommand implements Command {
     try {
       Board board = new Board();
       System.out.print("내용? ");
+ 
       board.setContents(keyboard.nextLine());
       
       System.out.print("작성자번호? ");
+
       board.setWriterNo(Integer.parseInt(keyboard.nextLine()));
       
       System.out.print("수업번호? ");
@@ -32,6 +34,7 @@ public class BoardAddCommand implements Command {
       
       boardDao.insert(board);
       
+
       System.out.println("입력했습니다!");    
     } catch (Exception e) {
       e.printStackTrace();

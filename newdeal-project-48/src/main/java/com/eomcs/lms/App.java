@@ -6,6 +6,9 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 import com.eomcs.lms.dao.BoardDao;
+import com.eomcs.lms.dao.MemberDao;
+import com.eomcs.lms.dao.impl.MariaDBBoardDao;
+import com.eomcs.lms.dao.impl.MariaDBMemberDao;
 import com.eomcs.lms.handler.BoardAddCommand;
 import com.eomcs.lms.handler.BoardDeleteCommand;
 import com.eomcs.lms.handler.BoardDetailCommand;
@@ -13,6 +16,7 @@ import com.eomcs.lms.handler.BoardListCommand;
 import com.eomcs.lms.handler.BoardUpdateCommand;
 import com.eomcs.lms.handler.Command;
 import com.eomcs.lms.handler.HelloCommand;
+import com.eomcs.lms.handler.LoginCommand;
 
 public class App {
 
@@ -24,7 +28,9 @@ public class App {
     
     //LessonHandler lessonHandler = new LessonHandler(keyboard, new ArrayList<>());
     //MemberHandler memberHandler = new MemberHandler(keyboard, new LinkedList<>());
-    BoardDao boardDao = new BoardDao();//의존성주입
+    BoardDao boardDao = new MariaDBBoardDao();//의존성주입
+    MemberDao memberDao = new MariaDBMemberDao();//의존성주입
+    
     
     HashMap<String,Command> commandMap = new HashMap<>();
 
@@ -39,6 +45,8 @@ public class App {
     commandMap.put("/board/delete", 
         new BoardDeleteCommand(keyboard, boardDao));
     commandMap.put("hello", new HelloCommand(keyboard));
+    
+    commandMap.put("/auth/login", new LoginCommand(keyboard, memberDao));
     
     while (true) {
       String command = prompt();

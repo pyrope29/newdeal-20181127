@@ -31,9 +31,6 @@ public class BoardDetailCommand implements Command {
       } else {
         System.out.println("해당 번호의 게시물이 없습니다!");
       }
-
-
-
     } catch (Exception e) {
       e.printStackTrace();
     } 

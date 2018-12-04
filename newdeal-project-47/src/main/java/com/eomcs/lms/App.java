@@ -6,6 +6,7 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 import com.eomcs.lms.dao.BoardDao;
+import com.eomcs.lms.dao.impl.MariaDBBoardDao;
 import com.eomcs.lms.handler.BoardAddCommand;
 import com.eomcs.lms.handler.BoardDeleteCommand;
 import com.eomcs.lms.handler.BoardDetailCommand;
@@ -24,7 +25,7 @@ public class App {
     
     //LessonHandler lessonHandler = new LessonHandler(keyboard, new ArrayList<>());
     //MemberHandler memberHandler = new MemberHandler(keyboard, new LinkedList<>());
-    BoardDao boardDao = new BoardDao();//의존성주입
+    BoardDao boardDao = new MariaDBBoardDao();//고객사에 따라 여기서 impl의 db를 구현하면 되는 것이다
     
     HashMap<String,Command> commandMap = new HashMap<>();
 

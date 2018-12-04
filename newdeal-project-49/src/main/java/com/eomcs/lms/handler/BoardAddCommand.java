@@ -1,10 +1,8 @@
 package com.eomcs.lms.handler;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.Scanner;
-import org.mariadb.jdbc.Driver;
 import com.eomcs.lms.dao.BoardDao;
 import com.eomcs.lms.domain.Board;
 
@@ -22,14 +20,14 @@ public class BoardAddCommand implements Command {
     try {
       Board board = new Board();
       System.out.print("내용? ");
+ 
       board.setContents(keyboard.nextLine());
-      
       System.out.print("작성자번호? ");
+
       board.setWriterNo(Integer.parseInt(keyboard.nextLine()));
-      
       System.out.print("수업번호? ");
-      board.setLessonNo(Integer.parseInt(keyboard.nextLine()));
       
+      board.setLessonNo(Integer.parseInt(keyboard.nextLine()));
       boardDao.insert(board);
       
       System.out.println("입력했습니다!");    
