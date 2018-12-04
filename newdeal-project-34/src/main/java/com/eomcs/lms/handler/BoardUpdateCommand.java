@@ -11,7 +11,6 @@ public class BoardUpdateCommand implements Command {
   public BoardUpdateCommand(Scanner keyboard, List<Board> list) {
     this.list = list;
     this.keyboard = keyboard;
-
   }
 
   private int indexOfBoard(int no) {
