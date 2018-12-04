@@ -23,7 +23,11 @@
 
 - src/main/resources/com/eomcs/lms/mapper/boardMapper.xml 파일 작성한다
 - BoardDao 클래스에 있는 sql을 이 파일로 옮긴다
+- 물론 MyBatis 문서를 참고하여 작성하라
 
 
 4. sqlsessionfactory 인스터느 생성
+
+    app클래스에서 mybatis의 sqlsesionFActory개
+
 5. dao 적용
