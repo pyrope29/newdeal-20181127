@@ -70,6 +70,6 @@
 - 다양한 DBMS에 대응하여 DAO를 교체할 수 있도록 하라!
 
 ## 48 : SQL 삽입 공격과 자바 보안
-
+  
 - SQL 삽입 공격을 이해하고 그 공격을 막아라!
 - Statement의 createStatement() 대신 PreparedStatement의 prepareStatement()를 사용하라.
