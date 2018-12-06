@@ -70,6 +70,23 @@
 - 다양한 DBMS에 대응하여 DAO를 교체할 수 있도록 하라!
 
 ## 48 : SQL 삽입 공격과 자바 보안
-
+  
 - SQL 삽입 공격을 이해하고 그 공격을 막아라!
 - Statement의 createStatement() 대신 PreparedStatement의 prepareStatement()를 사용하라.
+
+## 49 : MyBatis 도입
+
+- 자바 소스에서 SQL 코드를 분리하라!
+- JDBC 코드를 캡슐화한 MyBatis로 대체하라!
+
+## 50 : Spring IoC Container 도입
+
+- 객체 생성과 소멸을 Spring IoC 컨테이너에게 맡겨라!
+
+## 51 : Spring IoC 컨테이너와 MyBatis 연동하기
+
+- MyBatis가 하던 Database와 트랜잭션 관리 업무를 Spring IoC 컨테이너에게 넘겨라.
+
+## 52 : 자바 프로젝트를 웹 프로젝트로 전환하기
+
+- 이클립스의 톰캣 실행 환경에서 테스트 할 수 있도록 프로젝트의 유형을 변경하라.
