@@ -54,17 +54,3 @@ public class MariaDBBoardDao implements BoardDao {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

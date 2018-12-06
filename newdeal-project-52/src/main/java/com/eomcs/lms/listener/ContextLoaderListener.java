@@ -1,5 +1,4 @@
 package com.eomcs.lms.listener;
-
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -7,8 +6,7 @@ import javax.servlet.annotation.WebListener;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import com.eomcs.lms.AppConfig;
 
-// 규칙에 따라 리스너를 만들었으면 
-// 톰캣 서버에 등록해야만 실행된다.
+// 규칙에 따라 리스너를 만들었으면 톰캣 서버에 등록해야만 실행된다.
 @WebListener
 public class ContextLoaderListener 
     implements ServletContextListener {
@@ -30,28 +28,15 @@ public class ContextLoaderListener
       System.out.printf("%s ===> %s\n", name, 
           iocContainer.getBean(name).getClass().getName());
     }
-    
-    // Spring IoC 컨테이너를 서블릿이 사용할 수 있도록
-    // 'ServletContext'라는 보관소에 저장한다.
+    // Spring IoC 컨테이너를 서블릿이 사용할 수 있도록 'ServletContext'라는 보관소에 저장한다.
     ServletContext sc = sce.getServletContext();
     sc.setAttribute("iocContainer", iocContainer);
-    
   }
-  
   @Override
   public void contextDestroyed(ServletContextEvent sce) {
     System.out.println("웹 애플리케이션이 종료됨!");
-    
     // Spring IoC 컨테이너의 자원을 해제시킨다.
     this.iocContainer.close();
   }
   
 }
-
-
-
-
-
-
-
-

@@ -32,9 +32,3 @@ public class MariaDBMemberDao implements MemberDao {
   }
 
 }
-
-
-
-
-
-
