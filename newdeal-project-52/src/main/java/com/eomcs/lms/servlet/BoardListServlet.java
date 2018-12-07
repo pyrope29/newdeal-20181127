@@ -69,4 +69,11 @@ public class BoardListServlet extends HttpServlet {
       throw new ServletException(e);
     }
   }
+<<<<<<< HEAD
 }
+=======
+} 
+
+
+
+>>>>>>> work

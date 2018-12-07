@@ -2,7 +2,11 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<<<<<<< HEAD
 <mapper namespace="LessonDao">
+=======
+<mapper namespace="com.eomcs.lms.dao.LessonDao">
+>>>>>>> work
 
   <resultMap type="lesson" id="lessonMap">
     <id column="lno" property="no"/>
@@ -18,6 +22,7 @@
   <select id="findByParticipantNo" 
           resultType="hashmap" parameterType="int">
     select 
+<<<<<<< HEAD
     	lm.mno memberNo, 
     	l.lno lessonNo,
     	l.title 
@@ -27,3 +32,21 @@
   </select>
   
 </mapper>
+=======
+      lm.mno memberNo, 
+      l.lno lessonNo,
+      l.title
+    from les_memb lm
+      join lesson l on lm.lno=l.lno 
+    where lm.mno=#{value}
+  </select>
+  
+</mapper>
+
+
+
+
+
+
+
+>>>>>>> work

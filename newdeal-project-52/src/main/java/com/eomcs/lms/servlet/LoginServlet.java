@@ -1,6 +1,11 @@
 package com.eomcs.lms.servlet;
 
 import java.io.IOException;
+<<<<<<< HEAD
+=======
+import java.util.HashMap;
+import java.util.Map;
+>>>>>>> work
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +25,12 @@ public class LoginServlet extends HttpServlet {
   
   public void init() {
     ApplicationContext iocContainer = 
+<<<<<<< HEAD
         (ApplicationContext) this.getServletContext().getAttribute("iocContainer");
+=======
+        (ApplicationContext) this.getServletContext()
+                                 .getAttribute("iocContainer");
+>>>>>>> work
     this.memberDao = iocContainer.getBean(MemberDao.class);
   }
 
@@ -42,10 +52,19 @@ public class LoginServlet extends HttpServlet {
       throws ServletException, IOException {
     
     try {
+<<<<<<< HEAD
       String email = request.getParameter("email");
       String password = request.getParameter("password");
       
       Member member = memberDao.findByEmailPassword(email, password);
+=======
+      HashMap<String, Object> params = new HashMap<>();
+      
+      params.put("email",  request.getParameter("email"));
+      params.put("password", request.getParameter("password"));
+      
+      Member member = memberDao.findByEmailPassword(params);
+>>>>>>> work
       
       // 해당 클라이언트를 위한 HttpSession 객체가 있다면,
       // 그 객체를 리턴한다.
@@ -65,4 +84,16 @@ public class LoginServlet extends HttpServlet {
       throw new ServletException(e);
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+
+
+
+
+
+>>>>>>> work

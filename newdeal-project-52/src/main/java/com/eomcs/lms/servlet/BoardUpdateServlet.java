@@ -30,6 +30,7 @@ public class BoardUpdateServlet extends HttpServlet {
       HttpServletResponse response)
       throws ServletException, IOException {
 
+<<<<<<< HEAD
     // POST 요청으로 들어온 데이터는 UTF-8 로 인코딩 되어 있다.
     // 그런데 request.getParameter()의 리턴 값은 Unicode(2byte)이다.
     // 즉 UTF-8을 JVM이 다루는 Unicode로 변환한 후에 리턴하는 것이다.
@@ -44,6 +45,8 @@ public class BoardUpdateServlet extends HttpServlet {
     // 클라이언트가 보낸 데이터가 UTF-8로 되어 있다고 알려줘야 한다.
     // request.setCharacterEncoding("UTF-8");
     
+=======
+>>>>>>> work
     try {
       Board board = new Board();
       board.setNo(Integer.parseInt(request.getParameter("no")));

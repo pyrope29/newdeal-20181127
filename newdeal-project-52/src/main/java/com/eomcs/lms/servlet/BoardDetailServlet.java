@@ -45,4 +45,12 @@ public class BoardDetailServlet extends HttpServlet {
       throw new ServletException(e);
     }
   }
+<<<<<<< HEAD
 }  
+=======
+}
+
+
+
+
+>>>>>>> work
