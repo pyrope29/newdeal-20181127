@@ -8,25 +8,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-<<<<<<< HEAD
-@WebFilter("/*") //모든 요청 이전 필터 실행하겠단 뜻
-public class CharacterEncodingFilter implements Filter{
-
-  @Override
-  public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-      throws IOException, ServletException {
-    //미리 실행되어야할 메소드를 필터에 추가
-    request.setCharacterEncoding("UTF-8");
-    
-    //이 필터 다음에 또 다른 필터가 있다면 그 필터를 실행하며,
-    //없다면 원래 목적지인 서블릿을 실행한다는 뜻
-    chain.doFilter(request, response);
-    
-    
-  }
-  
-}
-=======
 @WebFilter("/*")
 public class CharacterEncodingFilter implements Filter {
   
@@ -64,4 +45,3 @@ public class CharacterEncodingFilter implements Filter {
 
 
 
->>>>>>> work

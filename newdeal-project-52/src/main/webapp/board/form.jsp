@@ -22,19 +22,11 @@
 <tr>
   <th>수업</th>
   <td>
-<<<<<<< HEAD
-  	<select name="lessonNo">
-			<c:forEach items="${lessons}" var="map">
-				<option value="${map.no}">${map.title}</option>
-			</c:forEach>  	
-  	</select>
-=======
     <select name="lessonNo">
     <c:forEach items="${lessons}" var="map">
       <option value="${map.lessonNo}">${map.title}</option>
     </c:forEach>
     </select>
->>>>>>> work
   </td>
 </tr>
 <tr>
@@ -48,8 +40,6 @@
 
 </body>
 </html>
-<<<<<<< HEAD
-=======
 
 
 
@@ -76,4 +66,3 @@
     
     
     
->>>>>>> work

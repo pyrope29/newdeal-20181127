@@ -27,25 +27,6 @@
 </tr>
 <tr>
   <th>작성일</th>
-<<<<<<< HEAD
-  <td><input type="text" readonly
-      value="${board.createdDate}"></td>
-</tr>
-<tr>
-  <th>조회수</th>
-  <td><input type="text" readonly
-      value="${board.viewCount}"></td>
-</tr>
-<tr>
-  <th>작성자</th>
-  <td><input type="text" readonly
-      value="${board.writerNo}"></td>
-</tr>
-<tr>
-  <th>수업</th>
-  <td><input type="text" readonly
-      value="${board.lessonNo}"></td>
-=======
   <td>${board.createdDate}</td>
 </tr>
 <tr>
@@ -59,7 +40,6 @@
 <tr>
   <th>수업</th>
   <td>${board.lesson.title}</td>
->>>>>>> work
 </tr>
 <tr>
   <th></th>
@@ -77,8 +57,6 @@ function remove() {
 </script>
 </body>
 </html>
-<<<<<<< HEAD
-=======
 
 
 
@@ -105,4 +83,3 @@ function remove() {
     
     
     
->>>>>>> work

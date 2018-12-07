@@ -22,13 +22,15 @@ import org.springframework.transaction.PlatformTransactionManager;
 // Spring IoC 컨테이너에게 프로퍼티 파일을 로딩할 것을 명령한다.
 @PropertySource("classpath:/com/eomcs/lms/conf/jdbc.properties")
 
-//Mybatis의 DAO 인터페이스 구현체를 자동생성하는 도우미 추가
-  //DAO interface가 들어있는 패키지 지정하기. 자동생성된 DAO 구현체가 sql을 찾을 때 인터페이스의 전체 이름으로 찾는다.
-    //따라서 sql Mapper 파일의 namespace 이름은 인터페이스의 전체 이름과 같아야함
-      //=> 인터페이스의 메서드 이름, 파라미터, 리턴타입 == 
-        //sql 매퍼의 이름, 파라미터, 리턴타입
+// MyBatis의 DAO 인터페이스 구현체를 자동 생성하는 도우미를 추가한다.
+// => DAO 인터페이스가 들어있는 패키지를 지정한다.
+// => 자동 생성된 DAO 구현체가 SQL을 찾을 때 
+//    인터페이스의 전체 이름으로 찾는다.
+//    따라서 SQL 매퍼 파일의 namespace 이름은 인터페이스의 전체 이름과 
+//    같아야 한다.
+// => 인터페이스의 메서드 이름, 파라미터, 리턴 타입이
+//    SQL 매퍼의 아이디, 파라미터, 리턴 타입과 같아야 한다.
 @MapperScan("com.eomcs.lms.dao")
-
 public class AppConfig {
   
   // Spring IoC 컨테이너가 로딩한 프로퍼티 정보를 가져오기

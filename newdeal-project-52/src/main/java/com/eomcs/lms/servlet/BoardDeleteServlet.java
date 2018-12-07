@@ -44,13 +44,9 @@ public class BoardDeleteServlet extends HttpServlet {
       throw new ServletException(e);
     }
   }
-<<<<<<< HEAD
-}
-=======
 }
 
 
 
 
 
->>>>>>> work

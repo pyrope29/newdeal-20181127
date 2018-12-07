@@ -10,16 +10,12 @@ public class Lesson implements Cloneable {
   private int totalHours;
   private int dayHours;
   private int ownerNo;
-<<<<<<< HEAD
-
-=======
   
->>>>>>> work
   @Override
   public Lesson clone() throws CloneNotSupportedException {
     return (Lesson) super.clone();
   }
-
+  
   public int getNo() {
     return no;
   }
@@ -70,9 +66,6 @@ public class Lesson implements Cloneable {
   public void setOwnerNo(int ownerNo) {
     this.ownerNo = ownerNo;
   }
-<<<<<<< HEAD
-=======
   
   
->>>>>>> work
 }

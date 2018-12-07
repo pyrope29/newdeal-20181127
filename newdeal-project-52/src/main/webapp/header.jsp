@@ -1,20 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-<<<<<<< HEAD
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-<c:if test="${loginUser!=null}">
-	<div>
-		${loginUser.name} <a href='/auth/logout'>로그아웃</a>
-	</div>
-</c:if>
-<c:if test="${loginUser==null}">
-	<div>
-		<a href='/auth/login'>로그인</a>
-	</div>
-
-</c:if>
-=======
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div>
@@ -27,4 +11,3 @@ ${loginUser.name}
 </c:if> 
 </div>
     
->>>>>>> work

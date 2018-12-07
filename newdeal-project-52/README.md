@@ -37,19 +37,16 @@
 
 - JSTL 구현 라이브러리를 가져온다.
     - mvnrepository.com에서 `jstl` 로 검색한다.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> work
 
 ### MVC 아키텍처 적용
 
 ### HttpSession을 이용한 로그인/로그아웃
 
-<<<<<<< HEAD
 ### Filter를 이용하여 서블릿을 실행하기 전에 특정 작업을 수행한다.
->>>>>>> a7eb81e6ef82116bc2cb30316797d6ffe6ff91f4
-=======
-### Filter를 이용하여 서블릿을 실행하기 전에 특정 작업을 수행한다.
->>>>>>> work
+
+### MyBatis의 고급 Result Map 다루기
+
+### MyBatis의 DAO 구현체 자동 생성하기
+
+- AppConfig.java
+    - @MapperScan 애노테이션 사용하여 DAO 인터페이스 구현체를 자동 생성한다.

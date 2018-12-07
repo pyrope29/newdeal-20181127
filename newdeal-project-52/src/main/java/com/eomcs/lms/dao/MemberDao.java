@@ -4,6 +4,6 @@ import java.util.Map;
 import com.eomcs.lms.domain.Member;
 
 public interface MemberDao {
-  Member findByEmailPassword(Map<String,Object> params) 
+  Member findByEmailPassword(Map<String, Object> params) 
       throws Exception;
 }
