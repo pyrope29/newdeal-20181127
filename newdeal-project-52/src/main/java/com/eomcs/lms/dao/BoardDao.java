@@ -15,17 +15,3 @@ public interface BoardDao {
   
   int delete(int no) throws Exception;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
