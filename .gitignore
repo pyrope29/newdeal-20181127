@@ -1,15 +1,6 @@
-.project
-.classpath
-.class
-.log
-.gradle/
-.settings/
-bin/
-build/
-temp/
-.vscode
-.DS_Store
-node_modules/
-security.properties
+# Ignore Gradle project-specific cache directory
+.gradle
 
-!build.gradle
+# Ignore Gradle build output directory
+build
+/bin/
