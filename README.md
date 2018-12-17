@@ -35,7 +35,7 @@
 - github.com/eomcs/eomcs-java-project 에서 v2.1 과제 해결
 
 ## 22 : 인스턴스 변수와 인스턴스 메서드가 필요한 이유
-
+  
 - github.com/eomcs/eomcs-java-project 에서 v2.2 과제 해결
 
 ## 24 : 생성자, setter/getter 사용
